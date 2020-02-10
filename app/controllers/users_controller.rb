@@ -15,7 +15,7 @@ class UsersController < ApplicationController
             name: params[:name],
             email: params[:email]
         )
-        render json: @user
+        redirect_to "http://localhost:3001/"
     end
 
     def destroy
