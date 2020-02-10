@@ -15,7 +15,7 @@ class UsersController < ApplicationController
             name: params[:name],
             email: params[:email]
         )
-        render json: {message: `User created!`}
+        render json: @user
     end
 
     def destroy

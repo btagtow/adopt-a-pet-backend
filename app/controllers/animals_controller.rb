@@ -12,10 +12,15 @@ class AnimalsController < ApplicationController
 
     def create
         @animal = Animal.create(
-            
-
+            name: params[:name],
+            age: params[:age],
+            gender: params[:gender],
+            kind: params[:kind],
+            breed: params[:breed],
+            shelter_id: params[:shelter_id],
+            temperament: params[:temperament]
         )
-        render json: {message: `User created!`}
+        render json: @animal
     end
 
     # t.string :name
