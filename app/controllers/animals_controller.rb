@@ -2,12 +2,12 @@ class AnimalsController < ApplicationController
 
     def index 
         @animals = Animal.all 
-        render json: @animals
+        render json: @animals, include: [:shelter]
     end
 
     def show 
         @animal = Animal.find(params[:id])
-        render json: @animal
+        render json: @animal, include: [:shelter]
     end
 
     def create
@@ -22,14 +22,6 @@ class AnimalsController < ApplicationController
         )
         render json: @animal
     end
-
-    # t.string :name
-    # t.integer :age
-    # t.string :gender
-    # t.string :kind
-    # t.string :breed
-    # t.references :shelter, null: false, foreign_key: true
-    # t.string :temperament
 
     def destroy
     end
