@@ -5,6 +5,11 @@ class SheltersController < ApplicationController
         render json: @shelters
     end
 
+    def show
+        @shelter = Shelter.find(params[:id])
+        render json: @shelter
+    end
+
     def create
         @shelter = Shelter.create(
             name: params[:name],
