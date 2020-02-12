@@ -8,6 +8,7 @@ class CreateAnimals < ActiveRecord::Migration[6.0]
       t.string :breed
       t.references :shelter, null: false, foreign_key: true
       t.string :temperament
+      t.string :picture
 
       t.timestamps
     end

@@ -17,6 +17,10 @@
 # t.datetime "updated_at", precision: 6, null: false
 # t.string "picture"
 # t.index ["shelter_id"], name: "index_animals_on_shelter_id"
+User.destroy_all
+Animal.destroy_all
+Shelter.destroy_all
+UserAnimal.destroy_all
 
 usr1 = User.create(name:"Evan", email: "evan@gmail.com")
 usr2 = User.create(name: "Ben", email: "ben@gmail.com")
@@ -34,4 +38,8 @@ an5 = Animal.create(name: "Molly", age: 3, gender: "Female", kind: "Dog", breed:
 an6 = Animal.create(name: "Charlie", age: 4, gender: "Unknown", kind: "Turtle", breed: "Turtle", shelter: sh4, temperament: "Slow", picture: "https://www.hsppr.org/sites/default/files/images/petharbor/A1461497.jpg")
 an7 = Animal.create(name: "Deedee", age: 9, gender: "Female", kind: "Cat", breed: "Domestic Shorthair", shelter: sh2, temperament: "Serious", picture: "http://petharbor.com/get_image.asp?RES=Detail&ID=A0580743&LOCATION=DDFL1")
 
-
+UserAnimal.create(user: usr1, animal: an1)
+UserAnimal.create(user: usr1, animal: an2)
+UserAnimal.create(user: usr1, animal: an5)
+UserAnimal.create(user: usr2, animal: an5)
+UserAnimal.create(user: usr2, animal: an7)
