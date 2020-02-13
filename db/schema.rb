@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_194237) do
     t.integer "shelter_id", null: false
     t.string "temperament"
     t.string "picture"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["shelter_id"], name: "index_animals_on_shelter_id"
