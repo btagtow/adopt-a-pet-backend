@@ -5,6 +5,7 @@ class CreateShelters < ActiveRecord::Migration[6.0]
       t.string :city
       t.string :address
       t.string :link
+      t.string :image
 
       t.timestamps
     end
