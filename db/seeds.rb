@@ -25,10 +25,10 @@ UserAnimal.destroy_all
 usr1 = User.create(name:"Evan", email: "evan@gmail.com")
 usr2 = User.create(name: "Ben", email: "ben@gmail.com")
 
-sh1 = Shelter.create(name: "Denver Animal Shelter", city: "Denver", address: "1241 W. Bayaud Ave.", link: "https://www.denvergov.org/content/denvergov/en/denver-animal-shelter/adoptables/view-adoptable-pets-online.html")
-sh2 = Shelter.create(name: "Dumb Friends League", city: "Denver", address: "2080 S. Quebec St.", link:"https://www.ddfl.org/")
-sh3 = Shelter.create(name: "Aurora Animal Shelter", city: "Aurora", address:"15750 E 32nd Aves", link:"https://www.auroragov.org/residents/animal_services/aurora_animal_shelter")
-sh4 = Shelter.create(name: "Humane Society Pikes Peak Region", city: "Colorado Springs", address:"610 Abbot Lane", link:"https://www.hsppr.org/")
+sh1 = Shelter.create(name: "Denver Animal Shelter", city: "Denver", address: "1241 W. Bayaud Ave.", link: "https://www.denvergov.org/content/dam/denvergov/Portals/682/images/Logos/DenverAnimalShelter_DenverAnimalProtection_Logo.png", image: "https://www.denvergov.org/content/dam/denvergov/Portals/682/images/Logos/DenverAnimalShelter_DenverAnimalProtection_Logo.png")
+sh2 = Shelter.create(name: "Dumb Friends League", city: "Denver", address: "2080 S. Quebec St.", link:"https://www.ddfl.org/", image: "https://i.pinimg.com/originals/78/8d/b7/788db7a41d69d30be3578c80cd1822e5.gif")
+sh3 = Shelter.create(name: "Aurora Animal Shelter", city: "Aurora", address:"15750 E 32nd Aves", link:"https://www.auroragov.org/residents/animal_services/aurora_animal_shelter", image: "https://p1cdn4static.civiclive.com/UserFiles/Servers/Server_1881137/Image/Dog%20and%20Cat%20Aurora%20Animal%20Shelter.jpg")
+sh4 = Shelter.create(name: "Humane Society Pikes Peak Region", city: "Colorado Springs", address:"610 Abbot Lane", link:"https://www.hsppr.org/", image: "https://www.hsppr.org/sites/default/files/images/news/HSPPRLogo_googleplus_v2.jpg")
 
 an1 = Animal.create(name: "Jar Jar Binks", age: 1, gender: "Male", kind: "dog", breed: "Husky/Labrador", shelter: sh1, temperament: "Timid, High Energy", picture: "https://petharbor.com/get_image.asp?RES=Detail&ID=A347113&LOCATION=DNVR")
 an2 = Animal.create(name: "Bonita", age: 3, gender: "Female", kind: "dog", breed: "Labrador mix", shelter: sh2, temperament: "Sweet/Energetic", picture: "https://petharbor.com/get_image.asp?RES=Detail&ID=A346906&LOCATION=DNVR")
