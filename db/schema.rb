@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_194237) do
+ActiveRecord::Schema.define(version: 2020_02_13_144422) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
@@ -20,24 +20,25 @@ ActiveRecord::Schema.define(version: 2020_02_10_194237) do
     t.string "breed"
     t.integer "shelter_id", null: false
     t.string "temperament"
-    t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "picture"
     t.index ["shelter_id"], name: "index_animals_on_shelter_id"
   end
 
   create_table "shelters", force: :cascade do |t|
     t.string "name"
     t.string "city"
-    t.string "address"
-    t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
+    t.string "link"
+    t.string "image"
   end
 
   create_table "user_animals", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "animal_id", null: false
+    t.integer "user_id"
+    t.integer "animal_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["animal_id"], name: "index_user_animals_on_animal_id"
@@ -52,6 +53,4 @@ ActiveRecord::Schema.define(version: 2020_02_10_194237) do
   end
 
   add_foreign_key "animals", "shelters"
-  add_foreign_key "user_animals", "animals"
-  add_foreign_key "user_animals", "users"
 end
