@@ -18,12 +18,34 @@ class AnimalsController < ApplicationController
             kind: params[:kind],
             breed: params[:breed],
             shelter_id: params[:shelter_id],
-            temperament: params[:temperament]
+            temperament: params[:temperament],
+            status: params[:status]
         )
         render json: @animal
     end
 
+    def update
+        @animal = Animal.find(params[:id])
+        @animal.update(
+            status: params[:status]
+        )
+        @animal.save
+
+        redirect_to "http://localhost:3001/pets.html"
+    end
+
     def destroy
+        @animal = Animal.find(params[:id])
+        
+        # @useranimal = UserAnimal.select(params[:animal_id]===@animal.id)
+       
+        # byebug
+        # @useranimal.destroy 
+         
+
+        @animal.destroy
+            
+        redirect_to "http://localhost:3001/pets.html" 
     end
 
 end
