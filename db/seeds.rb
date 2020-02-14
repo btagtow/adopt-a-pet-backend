@@ -41,11 +41,5 @@ an8 = Animal.create(name: "Tango", age: 3, gender: "Male", kind: "Cat", breed: "
 an9 = Animal.create(name: "Tansy", age: 1, gender: "Male", kind: "Cat", breed: "Domestic Shorthair", shelter: sh1, temperament: "Docile", picture: "https://petharbor.com/get_image.asp?RES=Detail&ID=A345209&LOCATION=DNVR", status: "available")
 an10 = Animal.create(name: "Carly", age: 8, gender: "Female", kind: "Cat", breed: "Domestic Shorthair", shelter: sh2, temperament: "Timid", picture: "http://www.petharbor.com/get_image.asp?RES=thumb&ID=A0601865&LOCATION=DDFL", status: "available")
 an11 = Animal.create(name: "Dustin", age: 7, gender: "Male", kind: "Cat", breed: "Domestic Shorthair", shelter: sh2, temperament: "Affectionate", picture: "http://www.petharbor.com/get_image.asp?RES=thumb&ID=A0658581&LOCATION=DDFL", status: "available")
-an12 = Animal.create(name: "Oreo", age: 1, gender: "Male", kind: "Cat", breed: "Domestic Shorthair", shelter: sh3, temperament: "Alert", picture: "http://petharbor.com/get_image.asp?RES=Detail&ID=A208313&LOCATION=AURO", status: "available")
 an13 = Animal.create(name: "Herman", age: 4, gender: "Male", kind: "Cat", breed: "Domestic Shorthair", shelter: sh4, temperament: "Shy", picture: "https://www.hsppr.org/sites/default/files/images/petharbor/A1459014.jpg", status: "available")
 
-UserAnimal.create(user: usr1, animal: an1)
-UserAnimal.create(user: usr1, animal: an12)
-UserAnimal.create(user: usr1, animal: an5)
-UserAnimal.create(user: usr2, animal: an13)
-UserAnimal.create(user: usr2, animal: an7)
